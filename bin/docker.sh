@@ -19,8 +19,8 @@ else
 fi
 
 # Build client and server.
-docker-compose -p tus-php -f ${COMPOSE_FILE} down
-docker-compose -p tus-php -f ${COMPOSE_FILE} up --build --remove-orphans -d
+docker compose -p tus-php -f ${COMPOSE_FILE} down
+docker compose -p tus-php -f ${COMPOSE_FILE} up --build --remove-orphans -d
 
 docker exec tus-php-server mkdir -p uploads
 docker exec tus-php-server chown www-data:root -R uploads

@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$server   = new \TusPhp\Tus\Server('redis');
+$server   = new \TusPhp\Tus\Server('apcu');
 $response = $server->serve();
 
 $response->send();
